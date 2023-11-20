@@ -66,6 +66,7 @@ public class MainManager : MonoBehaviour
     {
         m_Points += point;
         ScoreText.text = $"Score : {m_Points}";
+        GameManager.Instance.Score(m_Points);
     }
 
     public void GameOver()
@@ -73,4 +74,6 @@ public class MainManager : MonoBehaviour
         m_GameOver = true;
         GameOverText.SetActive(true);
     }
+
+
 }
